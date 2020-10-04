@@ -12,6 +12,10 @@ import { FormClose, Notification } from 'grommet-icons';
 import logo from './logo.svg';
 import './App.css';
 import AView from './pages/Aframe/AView.js' ;
+import SumView from './pages/Aframe/SumView.js' ;
+import ThreeView from './pages/Aframe/ThreeView.js' ;
+import MMDView from './pages/Aframe/MMDView.js' ;
+
 
 
 const App = () => {
@@ -27,9 +31,12 @@ const App = () => {
               <Button icon={<Notification />} onClick={() => setShowSidebar(!showSidebar)} />
             </AppBar>
             <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
-              <Box flex align='center' justify='center'>
-                app body
-                <AView/>
+              <Box fill flex align='center' justify='center'>
+                {/* app body */}
+                {/* <AView/> */}
+                <ThreeView/>
+                {/* <MMDView/> */}
+                {/* <SumView/> */}
             </Box>
               {(!showSidebar || size !== 'small') ? (
                 <Collapsible direction="horizontal" open={showSidebar}>
